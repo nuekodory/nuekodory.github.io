@@ -5,21 +5,22 @@
   
 
   
-  <title>AtCoder ABC100 を Python3 で解く | Hexo</title>
+  <title>AtCoder ABC100 を Python3 で解く | nueko&#39;s geek blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="123456input_lines = input().split()for element in input_lines:    print(element)print(&quot;Hello World&quot;)exit(0)">
+  <meta name="description" content="A. Happy Birthday!図をよーく見れば、1人が9切れ以上取ることができないことが分かります。隣接しない = 最低でも1つ間隔を開けなければならないということは、8切れ取った時1つ間隔で取ることになりこれが最大です。 全部で16個から8個ずつ取っても問題ないので、全体のケーキの残りについては考える必要がなく、1人最大8切れを守れば良いことになります。(マイナスの入力は条件から存在しませ">
+<meta name="keywords" content="AtCoder,ABC,Python3,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AtCoder ABC100 を Python3 で解く">
 <meta property="og:url" content="http://yoursite.com/2018/06/20/AtCoder-ABC100-を-Python3-で解く/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="123456input_lines = input().split()for element in input_lines:    print(element)print(&quot;Hello World&quot;)exit(0)">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-20T08:22:32.397Z">
+<meta property="og:site_name" content="nueko&#39;s geek blog">
+<meta property="og:description" content="A. Happy Birthday!図をよーく見れば、1人が9切れ以上取ることができないことが分かります。隣接しない = 最低でも1つ間隔を開けなければならないということは、8切れ取った時1つ間隔で取ることになりこれが最大です。 全部で16個から8個ずつ取っても問題ないので、全体のケーキの残りについては考える必要がなく、1人最大8切れを守れば良いことになります。(マイナスの入力は条件から存在しませ">
+<meta property="og:locale" content="Japanese">
+<meta property="og:updated_time" content="2018-06-20T09:14:24.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AtCoder ABC100 を Python3 で解く">
-<meta name="twitter:description" content="123456input_lines = input().split()for element in input_lines:    print(element)print(&quot;Hello World&quot;)exit(0)">
+<meta name="twitter:description" content="A. Happy Birthday!図をよーく見れば、1人が9切れ以上取ることができないことが分かります。隣接しない = 最低でも1つ間隔を開けなければならないということは、8切れ取った時1つ間隔で取ることになりこれが最大です。 全部で16個から8個ずつ取っても問題ないので、全体のケーキの残りについては考える必要がなく、1人最大8切れを守れば良いことになります。(マイナスの入力は条件から存在しませ">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="nueko&#39;s geek blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -38,7 +39,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">nueko&#39;s geek blog</a>
       </h1>
       
     </div>
@@ -70,6 +71,10 @@
   <time datetime="2018-06-20T08:20:33.000Z" itemprop="datePublished">2018-06-20</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/AtCoder/">AtCoder</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -86,28 +91,52 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">input_lines = input().split()</span><br><span class="line"><span class="keyword">for</span> element <span class="keyword">in</span> input_lines:</span><br><span class="line">    print(element)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"Hello World"</span>)</span><br><span class="line">exit(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+        <h1 id="A-Happy-Birthday"><a href="#A-Happy-Birthday" class="headerlink" title="A. Happy Birthday!"></a>A. Happy Birthday!</h1><p>図をよーく見れば、1人が9切れ以上取ることができないことが分かります。<br>隣接しない = 最低でも1つ間隔を開けなければならない<br>ということは、8切れ取った時1つ間隔で取ることになりこれが最大です。</p>
+<p>全部で16個から8個ずつ取っても問題ないので、全体のケーキの残りについては考える必要がなく、1人最大8切れを守れば良いことになります。<br>(マイナスの入力は条件から存在しません)</p>
+<p>よって、A, B が8以下であることが <code>Yay!</code> の条件ですので、</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> A &lt;= <span class="number">8</span> <span class="keyword">and</span> B &lt;= <span class="number">8</span>:</span><br><span class="line">    print(<span class="string">"Yay!"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">":("</span>)</span><br></pre></td></tr></table></figure>
+<p>となるように設計すれば良いことになります。</p>
+<h4 id="Accepted-Code-A-Happy-Birthday"><a href="#Accepted-Code-A-Happy-Birthday" class="headerlink" title="Accepted Code [A. Happy Birthday!]:"></a>Accepted Code [A. Happy Birthday!]:</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">input_line = input().split()</span><br><span class="line"></span><br><span class="line">cake_a = int(input_line[<span class="number">0</span>])</span><br><span class="line">cake_b = int(input_line[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> cake_a &gt; <span class="number">8</span> <span class="keyword">or</span> cake_b &gt; <span class="number">8</span>:</span><br><span class="line">    print(<span class="string">":("</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"Yay!"</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="B-Ringo’s-Favorite-Numbers"><a href="#B-Ringo’s-Favorite-Numbers" class="headerlink" title="B. Ringo’s Favorite Numbers"></a>B. Ringo’s Favorite Numbers</h1><p>色々な解法がありますが、ここでは <code>D = 0 or 1 or 2</code> ということを利用して解きます(場合分け)</p>
+<h4 id="D-0"><a href="#D-0" class="headerlink" title="D == 0"></a>D == 0</h4><p>“100でちょうど0回割り切れる” == “100で割り切れない”<br>と考えると解けるかと思います。<br>コードにすると<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if number % 100 != 0:</span><br><span class="line">    do</span><br></pre></td></tr></table></figure></p>
+<p>ということですね。</p>
+<p>ここで N &lt; 100 であれば単純に答えが N で終わりなのですが、<br><code>N &lt;= 100</code> なので <code>N == 100</code> について分ける必要があります。</p>
+<p>愚直に <code>N == 100</code> を場合分けしても良いですし、<br>100の倍数について無視してカウントするようにしても良いです(今回はこちらを採用)</p>
+<h4 id="D-1"><a href="#D-1" class="headerlink" title="D == 1"></a>D == 1</h4><p>“100でちょうど1回割り切れる” == “100で割り切れて、10000で割り切れない”<br>よってD == 0 の時と同様に N == 100 についてのみ場合分けをするか、<br>10000の倍数を無視してカウントするようにすれば良いです(今回はこちらを採用)</p>
+<h4 id="D-2"><a href="#D-2" class="headerlink" title="D == 2"></a>D == 2</h4><p>“100でちょうど2回割り切れる” == “10000で割り切れて、1000000で割り切れない”<br>よってD == 0, 1 の時と同様に N == 100 についてのみ場合分けをするか、<br>1000000の倍数を無視してカウントするようにすれば良いです(今回はこちらを採用)</p>
+<h4 id="Accepted-Code-B-Ringo’s-Favorite-Numbers"><a href="#Accepted-Code-B-Ringo’s-Favorite-Numbers" class="headerlink" title="Accepted Code [B. Ringo’s Favorite Numbers]:"></a>Accepted Code [B. Ringo’s Favorite Numbers]:</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">input_line = input().split()</span><br><span class="line">num_divide = int(input_line[<span class="number">0</span>])</span><br><span class="line">smallest_of = int(input_line[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> num_divide == <span class="number">0</span>:</span><br><span class="line">    counter = <span class="number">0</span></span><br><span class="line">    current_num = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> counter &lt; smallest_of:</span><br><span class="line">        current_num += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> current_num % <span class="number">100</span> == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            counter += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">elif</span> num_divide == <span class="number">1</span>:</span><br><span class="line">    counter = <span class="number">0</span></span><br><span class="line">    current_num = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> counter &lt; smallest_of:</span><br><span class="line">        current_num += <span class="number">100</span></span><br><span class="line">        <span class="keyword">if</span> current_num % <span class="number">10000</span> != <span class="number">0</span> <span class="keyword">and</span> current_num % <span class="number">1000000</span> != <span class="number">0</span>:</span><br><span class="line">            counter += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span>:               <span class="comment"># num_divide == 2</span></span><br><span class="line">    counter = <span class="number">0</span></span><br><span class="line">    current_num = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> counter &lt; smallest_of:</span><br><span class="line">        current_num += <span class="number">10000</span></span><br><span class="line">        <span class="keyword">if</span> current_num % <span class="number">1000000</span> != <span class="number">0</span>:</span><br><span class="line">            counter += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(str(current_num))</span><br></pre></td></tr></table></figure>
+<h1 id="C-3-or-2"><a href="#C-3-or-2" class="headerlink" title="C. *3 or /2"></a>C. *3 or /2</h1><p>“3倍する” or “2で割り切る” の操作をするのですが、</p>
+<p>“3倍する” のはまあ何回でもできますよね。</p>
+<p>というわけでネックになるのは “2で割り切る” ことです。<br>“2で割り切る” 動作は数列に対して 1回の操作で1つ以上適用しなければならないので、<br>1回の操作で1つを “2で割り切る” と考えます。</p>
+<p>するとこの問題は “2で何回割り切れるか” という問題になりますので、<br>数列のそれぞれの数について “2で何回割り切れるか” を調べます。<br>いくつか方法はありますが、2進法に変換して0が続く桁数を調べるのが良いでしょう(多分)</p>
+<h4 id="Accepted-Code-C-3-or-2"><a href="#Accepted-Code-C-3-or-2" class="headerlink" title="Accepted Code [C. *3 or /2]"></a>Accepted Code [C. *3 or /2]</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">array_length = int(input())</span><br><span class="line">input_line = input().split()</span><br><span class="line"></span><br><span class="line">array_int = list(map(int, input_line))</span><br><span class="line">array_bin = list(map(bin, array_int))</span><br><span class="line">array_bin_str = list(map(str, array_bin))</span><br><span class="line"></span><br><span class="line">array_dividable = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, array_length):</span><br><span class="line">    <span class="keyword">if</span> array_int[i] == <span class="number">0</span>:</span><br><span class="line">        array_dividable.append(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        target_line = array_bin_str[i]</span><br><span class="line">        count_dividable = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, len(target_line)):</span><br><span class="line">            target_char = target_line[-j]</span><br><span class="line">            <span class="keyword">if</span> target_char == <span class="string">'1'</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">elif</span> target_char == <span class="string">'b'</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                count_dividable += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        array_dividable.append(count_dividable)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> sum(array_dividable) == <span class="number">0</span>:</span><br><span class="line">    print(<span class="string">"0"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(str(sum(array_dividable)))</span><br></pre></td></tr></table></figure>
+<h1 id="D-Patisserie-ABC"><a href="#D-Patisserie-ABC" class="headerlink" title="D. Patisserie ABC"></a>D. Patisserie ABC</h1><p>全ての場合についてスコアを出そうとすると、ケーキ1000個から500個を取り出すときに計算量が最大で、このとき</p>
+<p>C(1000, 500) = 2.702882409E+299</p>
+<p>よってこんなんで<code>for</code> を回すと帰ってこない(計算が終了しない)ので別の方法を考えます。</p>
+<p>ところで、スコアは絶対値を採用するわけですが、<br>絶対値というのは <code>max(number, -number)</code> と等価です。</p>
+<p>よってこの場合、単純にスコアを足していったあとのことを考えると、</p>
+<p>「綺麗さ」「おいしさ」「人気度」の数値が <code>beauty, yummy, popular</code> だったとして<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+ beauty + yummy + popular</span><br><span class="line">+ beauty + yummy - popular</span><br><span class="line">+ beauty - yummy + popular</span><br><span class="line">- beauty + yummy + popular</span><br><span class="line">- beauty - yummy + popular</span><br><span class="line">+ beauty - yummy - popular</span><br><span class="line">- beauty + yummy - popular</span><br><span class="line">- beauty - yummy - popular</span><br></pre></td></tr></table></figure></p>
+<p>の8パターンのうち、最大のものが<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abs(beauty) + abs(yummy) + abs(popular)</span><br></pre></td></tr></table></figure></p>
+<p>と等しいとわかります。</p>
+<p>すると、絶対値で考えなくても単純に足していって最後に<code>max</code>を出せば良いことがわかります。</p>
+<p>さて、ここまできたところでもう一度上の8例について見てみます。</p>
+<p><code>+ beauty - yummy + popular</code> で考えてみましょう。</p>
+<p>これを最大化させるためには <code>+ beauty - yummy + popular</code> を各ケーキに対して算出し、大きいものから順番にケーキの個数だけ取れば良いことに気がつくでしょうか。</p>
+<p>すると8パターン全てに対して同じことが言えるのですから、これを計算して<code>max</code> を取ればスコアが最大であると言えます。</p>
+<h4 id="Accepted-Code-D-Patisserie-ABC"><a href="#Accepted-Code-D-Patisserie-ABC" class="headerlink" title="Accepted Code [D. Patisserie ABC]"></a>Accepted Code [D. Patisserie ABC]</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">input_line = input().split()</span><br><span class="line">total_cake = int(input_line[<span class="number">0</span>])</span><br><span class="line">select_cake = int(input_line[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">cake_scores = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, total_cake):</span><br><span class="line">    input_line = input().split()</span><br><span class="line">    beauty = int(input_line[<span class="number">0</span>])</span><br><span class="line">    yummy = int(input_line[<span class="number">1</span>])</span><br><span class="line">    common = int(input_line[<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line">    cake_scores.append((beauty, yummy, common))</span><br><span class="line"></span><br><span class="line"><span class="comment"># + beauty + yummy + common score_p_p_p</span></span><br><span class="line"><span class="comment"># + beauty + yummy - common score_p_p_n</span></span><br><span class="line"><span class="comment"># + beauty - yummy + common score_p_n_p</span></span><br><span class="line"><span class="comment"># - beauty + yummy + common score_n_p_p</span></span><br><span class="line"><span class="comment"># - beauty - yummy + common score_n_n_p</span></span><br><span class="line"><span class="comment"># + beauty - yummy - common score_p_n_n</span></span><br><span class="line"><span class="comment"># - beauty + yummy - common score_n_p_n</span></span><br><span class="line"><span class="comment"># - beauty - yummy - common score_n_n_n</span></span><br><span class="line"></span><br><span class="line">scores_p_p_p = []</span><br><span class="line">scores_p_p_n = []</span><br><span class="line">scores_p_n_p = []</span><br><span class="line">scores_n_p_p = []</span><br><span class="line">scores_n_n_p = []</span><br><span class="line">scores_p_n_n = []</span><br><span class="line">scores_n_p_n = []</span><br><span class="line">scores_n_n_n = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, total_cake):</span><br><span class="line">    beauty, yummy, common = cake_scores[i]</span><br><span class="line">    scores_p_p_p.append(beauty + yummy + common)</span><br><span class="line">    scores_p_p_n.append(beauty + yummy - common)</span><br><span class="line">    scores_p_n_p.append(beauty - yummy + common)</span><br><span class="line">    scores_n_p_p.append(-beauty + yummy + common)</span><br><span class="line">    scores_n_n_p.append(-beauty - yummy + common)</span><br><span class="line">    scores_p_n_n.append(beauty - yummy - common)</span><br><span class="line">    scores_n_p_n.append(-beauty + yummy - common)</span><br><span class="line">    scores_n_n_n.append(-beauty - yummy - common)</span><br><span class="line"></span><br><span class="line">scores_p_p_p.sort(reverse=<span class="keyword">True</span>)</span><br><span class="line">scores_p_p_n.sort(reverse=<span class="keyword">True</span>)</span><br><span class="line">scores_p_n_p.sort(reverse=<span class="keyword">True</span>)</span><br><span class="line">scores_n_p_p.sort(reverse=<span class="keyword">True</span>)</span><br><span class="line">scores_n_n_p.sort(reverse=<span class="keyword">True</span>)</span><br><span class="line">scores_p_n_n.sort(reverse=<span class="keyword">True</span>)</span><br><span class="line">scores_n_p_n.sort(reverse=<span class="keyword">True</span>)</span><br><span class="line">scores_n_n_n.sort(reverse=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">score_p_p_p = sum(scores_p_p_p[<span class="number">0</span>:select_cake])</span><br><span class="line">score_p_p_n = sum(scores_p_p_n[<span class="number">0</span>:select_cake])</span><br><span class="line">score_p_n_p = sum(scores_p_n_p[<span class="number">0</span>:select_cake])</span><br><span class="line">score_n_p_p = sum(scores_n_p_p[<span class="number">0</span>:select_cake])</span><br><span class="line">score_n_n_p = sum(scores_n_n_p[<span class="number">0</span>:select_cake])</span><br><span class="line">score_p_n_n = sum(scores_p_n_n[<span class="number">0</span>:select_cake])</span><br><span class="line">score_n_p_n = sum(scores_n_p_n[<span class="number">0</span>:select_cake])</span><br><span class="line">score_n_n_n = sum(scores_n_n_n[<span class="number">0</span>:select_cake])</span><br><span class="line"></span><br><span class="line">print(str(max(score_p_p_p, score_p_p_n, score_p_n_p, score_n_p_p, score_n_n_p, score_p_n_n, score_n_p_n, score_n_n_n)))</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/20/AtCoder-ABC100-を-Python3-で解く/" data-id="cjimuo1pq00012gwac8vqk82t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/20/AtCoder-ABC100-を-Python3-で解く/" data-id="cjimwj84t0000eywalu8z2si4" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ABC/">ABC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AtCoder/">AtCoder</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python3/">Python3</a></li></ul>
+
     </footer>
   </div>
   
     
-<nav id="article-nav">
-  
-  
-    <a href="/2018/06/20/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
   
 </article>
 
@@ -116,12 +145,33 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AtCoder/">AtCoder</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ABC/">ABC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AtCoder/">AtCoder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python3/">Python3</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ABC/" style="font-size: 10px;">ABC</a> <a href="/tags/AtCoder/" style="font-size: 10px;">AtCoder</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -143,10 +193,6 @@
             <a href="/2018/06/20/AtCoder-ABC100-を-Python3-で解く/">AtCoder ABC100 を Python3 で解く</a>
           </li>
         
-          <li>
-            <a href="/2018/06/20/hello-world/">Hello World</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -159,7 +205,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
+      &copy; 2018 Naoki Nakamura (nuekodory)<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
