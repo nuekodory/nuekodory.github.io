@@ -88,7 +88,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="A-Happy-Birthday"><a href="#A-Happy-Birthday" class="headerlink" title="A. Happy Birthday!"></a>A. Happy Birthday!</h1><p>図をよーく見れば、1人が9切れ以上取ることができないことが分かります。<br>隣接しない = 最低でも1つ間隔を開けなければならない<br>ということは、8切れ取った時1つ間隔で取ることになりこれが最大です。</p>
+        <p>図表とざっくりとした解説はこちらからどうぞ。<br><a href="https://img.atcoder.jp/abc100/editorial.pdf" target="_blank" rel="noopener">https://img.atcoder.jp/abc100/editorial.pdf</a></p>
+<h1 id="A-Happy-Birthday"><a href="#A-Happy-Birthday" class="headerlink" title="A. Happy Birthday!"></a>A. Happy Birthday!</h1><p>図をよーく見れば、1人が9切れ以上取ることができないことが分かります。<br>隣接しない = 最低でも1つ間隔を開けなければならない<br>ということは、8切れ取った時1つ間隔で取ることになりこれが最大です。</p>
 <p>全部で16個から8個ずつ取っても問題ないので、全体のケーキの残りについては考える必要がなく、1人最大8切れを守れば良いことになります。<br>(マイナスの入力は条件から存在しません)</p>
 <p>よって、A, B が8以下であることが <code>Yay!</code> の条件ですので、</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> A &lt;= <span class="number">8</span> <span class="keyword">and</span> B &lt;= <span class="number">8</span>:</span><br><span class="line">    print(<span class="string">"Yay!"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">":("</span>)</span><br></pre></td></tr></table></figure>

@@ -7,18 +7,18 @@
   
   <title>AtCoder ABC100 を Python3 で解く | nueko&#39;s geek blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A. Happy Birthday!図をよーく見れば、1人が9切れ以上取ることができないことが分かります。隣接しない = 最低でも1つ間隔を開けなければならないということは、8切れ取った時1つ間隔で取ることになりこれが最大です。 全部で16個から8個ずつ取っても問題ないので、全体のケーキの残りについては考える必要がなく、1人最大8切れを守れば良いことになります。(マイナスの入力は条件から存在しませ">
+  <meta name="description" content="図表とざっくりとした解説はこちらからどうぞ。https://img.atcoder.jp/abc100/editorial.pdf A. Happy Birthday!図をよーく見れば、1人が9切れ以上取ることができないことが分かります。隣接しない = 最低でも1つ間隔を開けなければならないということは、8切れ取った時1つ間隔で取ることになりこれが最大です。 全部で16個から8個ずつ取っても問題な">
 <meta name="keywords" content="AtCoder,ABC,Python3,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AtCoder ABC100 を Python3 で解く">
 <meta property="og:url" content="http://yoursite.com/2018/06/20/AtCoder-ABC100-を-Python3-で解く/index.html">
 <meta property="og:site_name" content="nueko&#39;s geek blog">
-<meta property="og:description" content="A. Happy Birthday!図をよーく見れば、1人が9切れ以上取ることができないことが分かります。隣接しない = 最低でも1つ間隔を開けなければならないということは、8切れ取った時1つ間隔で取ることになりこれが最大です。 全部で16個から8個ずつ取っても問題ないので、全体のケーキの残りについては考える必要がなく、1人最大8切れを守れば良いことになります。(マイナスの入力は条件から存在しませ">
+<meta property="og:description" content="図表とざっくりとした解説はこちらからどうぞ。https://img.atcoder.jp/abc100/editorial.pdf A. Happy Birthday!図をよーく見れば、1人が9切れ以上取ることができないことが分かります。隣接しない = 最低でも1つ間隔を開けなければならないということは、8切れ取った時1つ間隔で取ることになりこれが最大です。 全部で16個から8個ずつ取っても問題な">
 <meta property="og:locale" content="Japanese">
-<meta property="og:updated_time" content="2018-06-20T09:17:59.145Z">
+<meta property="og:updated_time" content="2018-06-20T09:21:31.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AtCoder ABC100 を Python3 で解く">
-<meta name="twitter:description" content="A. Happy Birthday!図をよーく見れば、1人が9切れ以上取ることができないことが分かります。隣接しない = 最低でも1つ間隔を開けなければならないということは、8切れ取った時1つ間隔で取ることになりこれが最大です。 全部で16個から8個ずつ取っても問題ないので、全体のケーキの残りについては考える必要がなく、1人最大8切れを守れば良いことになります。(マイナスの入力は条件から存在しませ">
+<meta name="twitter:description" content="図表とざっくりとした解説はこちらからどうぞ。https://img.atcoder.jp/abc100/editorial.pdf A. Happy Birthday!図をよーく見れば、1人が9切れ以上取ることができないことが分かります。隣接しない = 最低でも1つ間隔を開けなければならないということは、8切れ取った時1つ間隔で取ることになりこれが最大です。 全部で16個から8個ずつ取っても問題な">
   
     <link rel="alternate" href="/atom.xml" title="nueko&#39;s geek blog" type="application/atom+xml">
   
@@ -91,7 +91,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="A-Happy-Birthday"><a href="#A-Happy-Birthday" class="headerlink" title="A. Happy Birthday!"></a>A. Happy Birthday!</h1><p>図をよーく見れば、1人が9切れ以上取ることができないことが分かります。<br>隣接しない = 最低でも1つ間隔を開けなければならない<br>ということは、8切れ取った時1つ間隔で取ることになりこれが最大です。</p>
+        <p>図表とざっくりとした解説はこちらからどうぞ。<br><a href="https://img.atcoder.jp/abc100/editorial.pdf" target="_blank" rel="noopener">https://img.atcoder.jp/abc100/editorial.pdf</a></p>
+<h1 id="A-Happy-Birthday"><a href="#A-Happy-Birthday" class="headerlink" title="A. Happy Birthday!"></a>A. Happy Birthday!</h1><p>図をよーく見れば、1人が9切れ以上取ることができないことが分かります。<br>隣接しない = 最低でも1つ間隔を開けなければならない<br>ということは、8切れ取った時1つ間隔で取ることになりこれが最大です。</p>
 <p>全部で16個から8個ずつ取っても問題ないので、全体のケーキの残りについては考える必要がなく、1人最大8切れを守れば良いことになります。<br>(マイナスの入力は条件から存在しません)</p>
 <p>よって、A, B が8以下であることが <code>Yay!</code> の条件ですので、</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> A &lt;= <span class="number">8</span> <span class="keyword">and</span> B &lt;= <span class="number">8</span>:</span><br><span class="line">    print(<span class="string">"Yay!"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">":("</span>)</span><br></pre></td></tr></table></figure>
