@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-121078424-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <title>AtCoder ABC101 / ARC 099 を Python3 で解く | nueko&#39;s geek blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="【公式リンク】図表とざっくりとした解説はこちらからどうぞ。https://img.atcoder.jp/arc099/editorial.pdf A. Eating Symbols Easy高橋君が命令文をもぐもぐ食べます。  最初は0 “+” で1増加 “-“ で1減少 と単純なので、言葉の通りに実行してみましょう。 Accepted Code [A. Eating Symbols Easy]:">
+<meta name="keywords" content="AtCoder,ABC,Python3,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AtCoder ABC101 &#x2F; ARC 099 を Python3 で解く">
+<meta property="og:url" content="http://yoursite.com/2018/06/24/AtCoder-ABC101-ARC-099-を-Python3-で解く/index.html">
+<meta property="og:site_name" content="nueko&#39;s geek blog">
+<meta property="og:description" content="【公式リンク】図表とざっくりとした解説はこちらからどうぞ。https://img.atcoder.jp/arc099/editorial.pdf A. Eating Symbols Easy高橋君が命令文をもぐもぐ食べます。  最初は0 “+” で1増加 “-“ で1減少 と単純なので、言葉の通りに実行してみましょう。 Accepted Code [A. Eating Symbols Easy]:">
+<meta property="og:locale" content="Japanese">
+<meta property="og:image" content="http://yoursite.com/2018/06/24/AtCoder-ABC101-ARC-099-を-Python3-で解く/sunuke_1_1000.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/24/AtCoder-ABC101-ARC-099-を-Python3-で解く/sunuke_1001_2000.png">
+<meta property="og:updated_time" content="2018-06-24T08:21:06.323Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AtCoder ABC101 &#x2F; ARC 099 を Python3 で解く">
+<meta name="twitter:description" content="【公式リンク】図表とざっくりとした解説はこちらからどうぞ。https://img.atcoder.jp/arc099/editorial.pdf A. Eating Symbols Easy高橋君が命令文をもぐもぐ食べます。  最初は0 “+” で1増加 “-“ で1減少 と単純なので、言葉の通りに実行してみましょう。 Accepted Code [A. Eating Symbols Easy]:">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/24/AtCoder-ABC101-ARC-099-を-Python3-で解く/sunuke_1_1000.png">
+  
+    <link rel="alternate" href="/atom.xml" title="nueko&#39;s geek blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">nueko&#39;s geek blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-AtCoder-ABC101-ARC-099-を-Python3-で解く" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/24/AtCoder-ABC101-ARC-099-を-Python3-で解く/" class="article-date">
+  <time datetime="2018-06-24T05:35:05.000Z" itemprop="datePublished">2018-06-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/AtCoder/">AtCoder</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AtCoder ABC101 / ARC 099 を Python3 で解く
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>【公式リンク】図表とざっくりとした解説はこちらからどうぞ。<br><a href="https://img.atcoder.jp/arc099/editorial.pdf" target="_blank" rel="noopener">https://img.atcoder.jp/arc099/editorial.pdf</a></p>
+<h1 id="A-Eating-Symbols-Easy"><a href="#A-Eating-Symbols-Easy" class="headerlink" title="A. Eating Symbols Easy"></a>A. Eating Symbols Easy</h1><p>高橋君が命令文をもぐもぐ食べます。</p>
+<ul>
+<li>最初は0</li>
+<li>“+” で1増加</li>
+<li><p>“-“ で1減少</p>
+<p>と単純なので、言葉の通りに実行してみましょう。</p>
+<h4 id="Accepted-Code-A-Eating-Symbols-Easy"><a href="#Accepted-Code-A-Eating-Symbols-Easy" class="headerlink" title="Accepted Code [A. Eating Symbols Easy]:"></a>Accepted Code [A. Eating Symbols Easy]:</h4></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">orders = input()</span><br><span class="line"></span><br><span class="line">number = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> order <span class="keyword">in</span> orders:</span><br><span class="line">    <span class="keyword">if</span> order == <span class="string">'+'</span>:</span><br><span class="line">        number += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:    <span class="comment"># order == '-'</span></span><br><span class="line">        number -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(str(number))</span><br></pre></td></tr></table></figure>
+<h1 id="B-Digit-Sums-Easy"><a href="#B-Digit-Sums-Easy" class="headerlink" title="B. Digit Sums (Easy)"></a>B. Digit Sums (Easy)</h1><p>まずこの問題のいう<code>S(n)</code> を返す関数を作ってみましょう。<br>各桁の数字を足し合わせて返せばいいわけですね。</p>
+<p>ところで “各桁の数字を1つずつ切り出す” 方法にはいくつかあります。<br>一番pythonic なのはこんなのですかね：</p>
+<p><a href="https://stackoverflow.com/questions/14939953/sum-the-digits-of-a-number-python" target="_blank" rel="noopener">https://stackoverflow.com/questions/14939953/sum-the-digits-of-a-number-python</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># written by Uli Köhler on stackoverflow.com</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum_digits</span><span class="params">(n)</span>:</span></span><br><span class="line">    s = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> n:</span><br><span class="line">        s += n % <span class="number">10</span></span><br><span class="line">        n //= <span class="number">10</span></span><br><span class="line">    <span class="keyword">return</span> s</span><br></pre></td></tr></table></figure></p>
+<p>もちろんこれでも良いのですが、<code>iterable</code> でくるくる回す方が簡単に思いつく(気がする)ので、<br>文字列<code>str(number)</code> を <code>for</code> で回して1文字ずつ文字(<code>chr</code>) を切り出します。<br>切り出した文字は<code>int()</code> で囲ってやると数字に戻ります。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum_of_digits</span><span class="params">(arg: int)</span> -&gt; int:</span></span><br><span class="line">    arg_str = str(arg)</span><br><span class="line">    sum_digits = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> char <span class="keyword">in</span> arg_str:</span><br><span class="line">        sum_digits += int(char)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> sum_digits</span><br></pre></td></tr></table></figure>
+<p>さて、あとは”割り切れる”かどうかを判定すれば良いです。これは剰余(<code>a % b</code>)が0であることと等価です。<br>また、条件より入力<code>N</code>は正の整数なのでゼロ除算は考えなくて良いです。</p>
+<h4 id="Accepted-Code-B-Digit-Sums-Easy"><a href="#Accepted-Code-B-Digit-Sums-Easy" class="headerlink" title="Accepted Code [B. Digit Sums (Easy)]:"></a>Accepted Code [B. Digit Sums (Easy)]:</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sum_of_digits</span><span class="params">(arg: int)</span> -&gt; int:</span></span><br><span class="line">    arg_str = str(arg)</span><br><span class="line">    sum_digits = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> char <span class="keyword">in</span> arg_str:</span><br><span class="line">        sum_digits += int(char)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> sum_digits</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># main</span></span><br><span class="line">input_num = int(input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> input_num % sum_of_digits(input_num) == <span class="number">0</span>:</span><br><span class="line">    print(<span class="string">"Yes"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"No"</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="C-Minimization"><a href="#C-Minimization" class="headerlink" title="C. Minimization"></a>C. Minimization</h1><p>さて公式の解説にもある通り、数列中の最小値が1であることから、<br>何回動作を繰り返しても数列の要素の最小値は1です。</p>
+<p>よって全ての数字を揃えた時、必ず1に揃うことになります。<br>(わからなかったら手を動かして実際に動作を紙に書いて実行してみましょう)</p>
+<p>さて、全て1に揃えればいいと気づいたところで、再び動作をよく観察すると、<br>1回の動作につき “1になる要素数” が最大で <code>K-1</code> 個できるのがわかります。<br>右にずらしたり左にずらしたりして試行してみると、最善の動作1回に対して<br>常に<code>K-1</code> 個の要素が1になるとわかります</p>
+<p>最小値に揃える連続する要素の数<code>K</code> 試行回数 <code>T</code> に対し、要素が1に等しい要素数 <code>E</code> とすると、<br>最善の動作を繰り返したとき <code>E = 1 + T * (K-1) ただしE&lt;=N</code></p>
+<p>よって、 <code>N =&lt; 1 + T * (K-1)</code> になる<code>T</code>を求めれば良いとわかります。<br>数列の並びが入力されますが捨てて良いです。</p>
+<h4 id="Accepted-Code-C-Minimization"><a href="#Accepted-Code-C-Minimization" class="headerlink" title="Accepted Code [C. Minimization]"></a>Accepted Code [C. Minimization]</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">input_line = input().split()</span><br><span class="line"></span><br><span class="line">num_array = int(input_line[<span class="number">0</span>])</span><br><span class="line">num_equal = int(input_line[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">input_line = input()</span><br><span class="line">array_str = input_line.split()</span><br><span class="line"></span><br><span class="line">array = list(map(int, array_str))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> index, number <span class="keyword">in</span> enumerate(array):</span><br><span class="line">    <span class="keyword">if</span> number == <span class="number">1</span>:</span><br><span class="line">        index_min = index</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">equalized = <span class="number">1</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> equalized &lt; num_array:</span><br><span class="line">    equalized += (num_equal - <span class="number">1</span>)</span><br><span class="line">    <span class="comment"># print(i, equalized)</span></span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(str(i))</span><br></pre></td></tr></table></figure>
+<h1 id="D-Sunuke-Numbers"><a href="#D-Sunuke-Numbers" class="headerlink" title="D. Sunuke Numbers"></a>D. Sunuke Numbers</h1><p><strong>解説が途中までです</strong></p>
+<p>……とりあえずグラフでも描いて考えてみましょうか！(なげやり)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sunuke_sum</span><span class="params">(arg: str)</span> -&gt; int:</span></span><br><span class="line">    sum_digit = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> char <span class="keyword">in</span> arg:</span><br><span class="line">        sum_digit += int(char)</span><br><span class="line">    <span class="keyword">return</span> sum_digit</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sunuke_list = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">1000</span>):</span><br><span class="line">    sunuke_list.append(i / sunuke_sum(str(i)))</span><br><span class="line"></span><br><span class="line">plt.plot(sunuke_list)</span><br><span class="line">plt.ylabel(<span class="string">"number/sunuke(number)"</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
+<p>するとこんな感じで出てきます<br><img src="/2018/06/24/AtCoder-ABC101-ARC-099-を-Python3-で解く/sunuke_1_1000.png" title="number/sunuke(number) 1 to 1000"></p>
+<p>グラフパッとみた感じ、<br>1, 2, 3, 4, 5, 6, 7, 8, 9, 19, 29, 39, 49, 59, 69, 79, 89, 99, 199, 299, 399…</p>
+<p>…499, 599, 699, 799, 899, 999, <strong>1999, 2999, 3999</strong>…</p>
+<p>って見えますね！見えますよね！<strong>残念でした！そうじゃないんです</strong></p>
+<img src="/2018/06/24/AtCoder-ABC101-ARC-099-を-Python3-で解く/sunuke_1001_2000.png" title="number/sunuke(number) 1001 to 2000">
+<p>この通り、 1099, 1199, 1299, 1399… も最小の値を更新しながら進んでいるんですね、<strong>不可解</strong></p>
+<p><strong>解説が途中までです</strong></p>
+<h4 id="Accepted-Code-D-Sunuke-Numbers"><a href="#Accepted-Code-D-Sunuke-Numbers" class="headerlink" title="Accepted Code [D. Sunuke Numbers]"></a>Accepted Code [D. Sunuke Numbers]</h4><h1 id="ARC099-の軌跡"><a href="#ARC099-の軌跡" class="headerlink" title="ARC099 の軌跡"></a>ARC099 の軌跡</h1><p>ARC099 の提出記録です。実行時間や使用メモリもわかります。<strong>まあよくやったよ、うん</strong><br><a href="https://beta.atcoder.jp/contests/arc099/submissions?f.Task=&amp;f.Language=&amp;f.Status=&amp;f.User=nuekodory" target="_blank" rel="noopener">https://beta.atcoder.jp/contests/arc099/submissions?f.Task=&amp;f.Language=&amp;f.Status=&amp;f.User=nuekodory</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/06/24/AtCoder-ABC101-ARC-099-を-Python3-で解く/" data-id="cjishn8br00005bwasp0r68yz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ABC/">ABC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AtCoder/">AtCoder</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python3/">Python3</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/01/info/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          info
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/20/AtCoder-ABC100-を-Python3-で解く/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">AtCoder ABC100 を Python3 で解く</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AtCoder/">AtCoder</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ABC/">ABC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AtCoder/">AtCoder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python3/">Python3</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ABC/" style="font-size: 10px;">ABC</a> <a href="/tags/AtCoder/" style="font-size: 10px;">AtCoder</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/01/info/">info</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/24/AtCoder-ABC101-ARC-099-を-Python3-で解く/">AtCoder ABC101 / ARC 099 を Python3 で解く</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/20/AtCoder-ABC100-を-Python3-で解く/">AtCoder ABC100 を Python3 で解く</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Naoki Nakamura (nuekodory)<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
