@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-121078424-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <title>AtCoder ABC099 を Python3 で解く | nueko&#39;s geek blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ちょっと順番が前後しますが順に過去に向かっても掘り下げていこうかと思います公式の解説はこちらhttps://img.atcoder.jp/abc099/editorial.pdf A. ABD数字までprint しなきゃいけないかと思ってたら違いました。 問題文良く読めという話  1, 2… 999  のとき “ABC” 1000, 1001…のとき “ABD”  を出力すれば良いので解法は正直に">
+<meta name="keywords" content="AtCoder,ABC,Python3,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AtCoder ABC099 を Python3 で解く">
+<meta property="og:url" content="http://yoursite.com/2018/06/27/AtCoder-ABC099-を-Python3-で解く/index.html">
+<meta property="og:site_name" content="nueko&#39;s geek blog">
+<meta property="og:description" content="ちょっと順番が前後しますが順に過去に向かっても掘り下げていこうかと思います公式の解説はこちらhttps://img.atcoder.jp/abc099/editorial.pdf A. ABD数字までprint しなきゃいけないかと思ってたら違いました。 問題文良く読めという話  1, 2… 999  のとき “ABC” 1000, 1001…のとき “ABD”  を出力すれば良いので解法は正直に">
+<meta property="og:locale" content="Japanese">
+<meta property="og:updated_time" content="2018-06-29T05:31:54.558Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AtCoder ABC099 を Python3 で解く">
+<meta name="twitter:description" content="ちょっと順番が前後しますが順に過去に向かっても掘り下げていこうかと思います公式の解説はこちらhttps://img.atcoder.jp/abc099/editorial.pdf A. ABD数字までprint しなきゃいけないかと思ってたら違いました。 問題文良く読めという話  1, 2… 999  のとき “ABC” 1000, 1001…のとき “ABD”  を出力すれば良いので解法は正直に">
+  
+    <link rel="alternate" href="/atom.xml" title="nueko&#39;s geek blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">nueko&#39;s geek blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-AtCoder-ABC099-を-Python3-で解く" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/27/AtCoder-ABC099-を-Python3-で解く/" class="article-date">
+  <time datetime="2018-06-26T23:38:15.000Z" itemprop="datePublished">2018-06-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AtCoder ABC099 を Python3 で解く
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ちょっと順番が前後しますが順に過去に向かっても掘り下げていこうかと思います<br>公式の解説はこちら<br><a href="https://img.atcoder.jp/abc099/editorial.pdf" target="_blank" rel="noopener">https://img.atcoder.jp/abc099/editorial.pdf</a></p>
+<h1 id="A-ABD"><a href="#A-ABD" class="headerlink" title="A. ABD"></a>A. ABD</h1><p>数字まで<code>print</code> しなきゃいけないかと思ってたら違いました。 <em>問題文良く読めという話</em></p>
+<ul>
+<li>1, 2… 999  のとき “ABC”</li>
+<li>1000, 1001…のとき “ABD”</li>
+</ul>
+<p>を出力すれば良いので解法は正直に考えれば<br><code>input()</code> を <code>int</code> に変換して大小を比較する方法でしょうか。<br><code>str</code> のまま受け取って <code>len(str)</code> で比較しても良いですけど……</p>
+<h4 id="Accepted-Code-A-ABD"><a href="#Accepted-Code-A-ABD" class="headerlink" title="Accepted Code [A. ABD]"></a>Accepted Code [A. ABD]</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">input_num = int(input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> input_num &lt; <span class="number">1000</span>:</span><br><span class="line">    print(<span class="string">"ABC"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"ABD"</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="B-Stone-Monument"><a href="#B-Stone-Monument" class="headerlink" title="B. Stone Monument"></a>B. Stone Monument</h1><p>与えられた2つの「雪より出てる部分の高さ」から、雪の積もった高さが等しいことを利用すると、<br>2つの塔の高さの差がわかります。すると、例えば<br><code>1+2+3+4</code> <code>1+2+3+4+5</code> となる2つの塔の差が<code>5</code> になる というように例を考えていけば、<br><code>(低い方の塔の高さ) = 1+2+...+(塔の高さの差 - 1)</code><br>となります</p>
+<p>さて、塔の高さが求まればあとは簡単な話で<br><code>(雪の深さ) + (塔の雪から出ている部分) = (塔の高さ)</code><br>を低い方か高い方、どちらかの塔に対して計算すれば良いです。今回は低い方で考えています</p>
+<h4 id="Accepted-Code-B-Stone-Monument"><a href="#Accepted-Code-B-Stone-Monument" class="headerlink" title="Accepted Code [B. Stone Monument]"></a>Accepted Code [B. Stone Monument]</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">delta2lower_height</span><span class="params">(arg_num)</span>:</span></span><br><span class="line">    height = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, arg_num):</span><br><span class="line">        height += i</span><br><span class="line">    <span class="keyword">return</span> height</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># main</span></span><br><span class="line">input_line = input().split()</span><br><span class="line"></span><br><span class="line">higher_margin = int(input_line[<span class="number">0</span>])</span><br><span class="line">lower_margin = int(input_line[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">delta = higher_margin - lower_margin</span><br><span class="line"></span><br><span class="line">lower_height = delta2lower_height(delta)</span><br><span class="line">snow_height = lower_height - lower_margin</span><br><span class="line"></span><br><span class="line">print(str(snow_height))</span><br></pre></td></tr></table></figure>
+<h1 id="C-Strange-Bank"><a href="#C-Strange-Bank" class="headerlink" title="C. Strange Bank"></a>C. Strange Bank</h1><p><del>こんな銀行預けたくない</del> さて、考えていきましょう……<br>6^n 円引き出す時を考えると、6^n 円 を引き出す動作 <em> 6回は、明らかに<br>6</em>6^n = 6^(n+1) となるため、6^(n+1) 円 1回 を引き出す動作と金額が等しくなり、<br>5回分を無駄に使うことになってしまいます。よって、<br>6^n 円を引き出す動作はすべての n∈(自然数) に対して5回までと制限することができます。<br>同様のことは9^n 円についても言えます (8回まで)</p>
+<p>また、問題条件より額が100000円を下回ることから、</p>
+<ul>
+<li>6^7 = 279936 円</li>
+<li>9^6 = 531441 円<br>これ以上の引き出しはできないことになります。</li>
+</ul>
+<p>よって、引き出しの動作としては以下のものが挙げられます</p>
+<ul>
+<li>1 円</li>
+<li>6^1, 6^2, 6^3, 6^4, 6^5, 6^6 円</li>
+<li>9^1, 9^2, 9^3, 9^4, 9^5 円</li>
+</ul>
+<p>引き出し全体としては、これらの引き出しが0回以上組み合わされると考えられます。<br>ところで、6^n 円の引き出し系統の回数が定められた時、<br>残る動作は 9^n 円の引き出しと1円の引き出しのため、最適な引き出し方法が一意に定まります。</p>
+<p>よって、6^1… 6^6 円 について 0回以上5回以下 = 6 * 6 * 6 パターンについて調べる方法で<br>十分に短い時間で全ての(最適な)組み合わせについて調べることができます。</p>
+<h4 id="Accepted-Code-C-Strange-Bank"><a href="#Accepted-Code-C-Strange-Bank" class="headerlink" title="Accepted Code [C. Strange Bank]"></a>Accepted Code [C. Strange Bank]</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">input_num = int(input())</span><br><span class="line"></span><br><span class="line">combinations = [(pow1, pow2, pow3, pow4, pow5, pow6)</span><br><span class="line">                <span class="keyword">for</span> pow1 <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">6</span>)</span><br><span class="line">                <span class="keyword">for</span> pow2 <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">6</span>)</span><br><span class="line">                <span class="keyword">for</span> pow3 <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">6</span>)</span><br><span class="line">                <span class="keyword">for</span> pow4 <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">6</span>)</span><br><span class="line">                <span class="keyword">for</span> pow5 <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">6</span>)</span><br><span class="line">                <span class="keyword">for</span> pow6 <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">6</span>)]</span><br><span class="line"></span><br><span class="line">num_withdraw_list = []</span><br><span class="line"><span class="keyword">for</span> combination <span class="keyword">in</span> combinations:</span><br><span class="line">    pow1, pow2, pow3, pow4, pow5, pow6 = combination</span><br><span class="line">    withdraw6 = <span class="number">6</span> ** <span class="number">1</span> * pow1 + <span class="number">6</span> ** <span class="number">2</span> * pow2 + \</span><br><span class="line">                <span class="number">6</span> ** <span class="number">3</span> * pow3 + <span class="number">6</span> ** <span class="number">4</span> * pow4 + \</span><br><span class="line">                <span class="number">6</span> ** <span class="number">5</span> * pow5 + <span class="number">6</span> ** <span class="number">6</span> * pow6</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> withdraw6 &gt; input_num:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        rest = input_num - withdraw6</span><br><span class="line">        num_withdraw = sum(combination)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> reversed(range(<span class="number">1</span>, <span class="number">6</span>)):</span><br><span class="line">            withdraw_i = rest // <span class="number">9</span> ** i</span><br><span class="line">            rest -= <span class="number">9</span> ** i * withdraw_i</span><br><span class="line">            num_withdraw += withdraw_i</span><br><span class="line">        num_withdraw += rest</span><br><span class="line">        num_withdraw_list.append(num_withdraw)</span><br><span class="line"></span><br><span class="line">print(str(min(num_withdraw_list)))</span><br></pre></td></tr></table></figure>
+<h1 id="D-Good-Grid"><a href="#D-Good-Grid" class="headerlink" title="D. Good Grid"></a>D. Good Grid</h1><h4 id="Accepted-Code-D-Good-Grid"><a href="#Accepted-Code-D-Good-Grid" class="headerlink" title="Accepted Code [D. Good Grid]"></a>Accepted Code [D. Good Grid]</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">input_line = input().split()</span><br><span class="line">grid_size = int(input_line[<span class="number">0</span>])</span><br><span class="line">num_color = int(input_line[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">differential_cost = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> color_from <span class="keyword">in</span> range(<span class="number">1</span>, num_color + <span class="number">1</span>):</span><br><span class="line">    input_line = input().split()</span><br><span class="line">    <span class="keyword">for</span> color_to <span class="keyword">in</span> range(<span class="number">1</span>, num_color + <span class="number">1</span>):</span><br><span class="line">        differential_cost[(color_from, color_to)] = int(input_line[color_to<span class="number">-1</span>])</span><br><span class="line"></span><br><span class="line">color_map = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, grid_size + <span class="number">1</span>):</span><br><span class="line">    input_line = input().split()</span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> range(<span class="number">1</span>, grid_size + <span class="number">1</span>):</span><br><span class="line">        color_map[(x, y)] = int(input_line[y<span class="number">-1</span>])</span><br><span class="line"></span><br><span class="line">current_color_dict = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> color <span class="keyword">in</span> range(<span class="number">1</span>, num_color+<span class="number">1</span>):</span><br><span class="line">    current_color_dict[color] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">current_color_mod0 = copy.deepcopy(current_color_dict)</span><br><span class="line">current_color_mod1 = copy.deepcopy(current_color_dict)</span><br><span class="line">current_color_mod2 = copy.deepcopy(current_color_dict)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> index, color <span class="keyword">in</span> color_map.items():</span><br><span class="line">    x, y = index</span><br><span class="line">    <span class="keyword">if</span> (x + y) % <span class="number">3</span> == <span class="number">0</span>:</span><br><span class="line">        current_color_mod0[color] += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> (x + y) % <span class="number">3</span> == <span class="number">1</span>:</span><br><span class="line">        current_color_mod1[color] += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> (x + y) % <span class="number">3</span> == <span class="number">2</span>:</span><br><span class="line">        current_color_mod2[color] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">combinations = [(color_mod0, color_mod1, color_mod2)</span><br><span class="line">                <span class="keyword">for</span> color_mod0 <span class="keyword">in</span> range(<span class="number">1</span>, num_color+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">for</span> color_mod1 <span class="keyword">in</span> range(<span class="number">1</span>, num_color+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">for</span> color_mod2 <span class="keyword">in</span> range(<span class="number">1</span>, num_color+<span class="number">1</span>)]</span><br><span class="line"></span><br><span class="line">cost_list = []</span><br><span class="line"><span class="keyword">for</span> combination <span class="keyword">in</span> combinations:</span><br><span class="line">    color_mod0, color_mod1, color_mod2 = combination</span><br><span class="line">    <span class="keyword">if</span> color_mod0 == color_mod1 <span class="keyword">or</span> color_mod0 == color_mod2 <span class="keyword">or</span> color_mod1 == color_mod2:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    cost = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> color_from <span class="keyword">in</span> range(<span class="number">1</span>, num_color+<span class="number">1</span>):</span><br><span class="line">        cost += differential_cost[(color_from, color_mod0)] * current_color_mod0[color_from]</span><br><span class="line">        cost += differential_cost[(color_from, color_mod1)] * current_color_mod1[color_from]</span><br><span class="line">        cost += differential_cost[(color_from, color_mod2)] * current_color_mod2[color_from]</span><br><span class="line"></span><br><span class="line">    cost_list.append(cost)</span><br><span class="line"></span><br><span class="line">print(str(min(cost_list)))</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/06/27/AtCoder-ABC099-を-Python3-で解く/" data-id="cjizfxe7700006zwa5hgkyui0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ABC/">ABC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AtCoder/">AtCoder</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python3/">Python3</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/01/info/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          info
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/24/AtCoder-ABC101-ARC-099-を-Python3-で解く/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">AtCoder ABC101 / ARC 099 を Python3 で解く</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AtCoder/">AtCoder</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ABC/">ABC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AtCoder/">AtCoder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python3/">Python3</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ABC/" style="font-size: 10px;">ABC</a> <a href="/tags/AtCoder/" style="font-size: 10px;">AtCoder</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/01/info/">info</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/27/AtCoder-ABC099-を-Python3-で解く/">AtCoder ABC099 を Python3 で解く</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/24/AtCoder-ABC101-ARC-099-を-Python3-で解く/">AtCoder ABC101 / ARC 099 を Python3 で解く</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/20/AtCoder-ABC100-を-Python3-で解く/">AtCoder ABC100 を Python3 で解く</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Naoki Nakamura (nuekodory)<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
